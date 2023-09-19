@@ -104,7 +104,7 @@ public class MestrePokemonController : ControllerBase
         try
         {
             _mestrePokemonService.DeleteMestrePokemonById(id);
-            return NoContent();
+            return Ok("Mestre Pokemon deletado com sucesso");
         }
         catch
         {
