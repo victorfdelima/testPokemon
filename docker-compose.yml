@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  PokeAPI:
+    image: pokeapi
+    build:
+      context: .
+      dockerfile: Dockerfile
