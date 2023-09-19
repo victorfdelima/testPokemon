@@ -25,16 +25,16 @@ Para configurar o banco de dados SQLite para este projeto, siga estas etapas:
 
 Para criar as tabelas do banco de dados necessárias para este projeto, você pode usar os seguintes scripts SQL:
 
--- CREATE TABLE IF NOT EXISTS MestrePokemon
+`-- CREATE TABLE IF NOT EXISTS MestrePokemon
 CREATE TABLE IF NOT EXISTS MestrePokemon (
     Id INTEGER PRIMARY KEY AUTOINCREMENT,
     Name TEXT NOT NULL,
     Age INTEGER,
     Password TEXT NOT NULL,
     NumberCaptured INT NULL
-);
+);`
 
--- CREATE TABLE IF NOT EXISTS captured_pokemon
+`-- CREATE TABLE IF NOT EXISTS captured_pokemon
 CREATE TABLE IF NOT EXISTS captured_pokemon (
     Id INTEGER PRIMARY KEY AUTOINCREMENT,
     MestrePokemonId INTEGER NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS captured_pokemon (
     capturedDate DATETIME NULL,
     BackDefault TEXT,
     FOREIGN KEY (MestrePokemonId) REFERENCES MestrePokemon(Id)
-);
+);`
 
 Você pode executar esses scripts em um cliente SQLite ou utilizar alguma ferramenta de gerenciamento de banco de dados SQLite para criar as tabelas (Recomendo Dbeaver).
 
